@@ -224,36 +224,6 @@
       font-weight: 900;
       background: linear-gradient(135deg, #e2f8ff, #ffffff);
     }
-    .shared-image-tile {
-      min-height: 260px;
-      display: grid;
-      place-items: center;
-      padding: 24px;
-      text-align: center;
-      color: #0a526f;
-      background:
-        linear-gradient(135deg, rgba(3,169,184,.14), rgba(101,220,199,.2)),
-        #ffffff;
-    }
-    .shared-image-tile i {
-      display: block;
-      margin-bottom: 12px;
-      color: var(--teal);
-      font-size: 2rem;
-    }
-    .shared-image-tile a {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      margin-top: 14px;
-      padding: 10px 13px;
-      border-radius: 999px;
-      background: var(--blue);
-      color: white;
-      text-decoration: none;
-      font-weight: 800;
-      font-size: .92rem;
-    }
 
     .explain {
       display: grid;
@@ -280,9 +250,6 @@
     .risk-item { border-left: 4px solid var(--coral); }
     .risk-item:nth-child(2) { border-left-color: var(--amber); }
     .risk-item:nth-child(3) { border-left-color: var(--teal); }
-
-    .myth { background: #fff4f1; border-color: rgba(236,119,95,.26); }
-    .fact { background: #effdf9; border-color: rgba(101,220,199,.36); }
 
     .reveal {
       opacity: 0;
@@ -372,8 +339,8 @@
       <a href="#visuals">Images</a>
       <a href="#symptoms">Symptoms</a>
       <a href="#causes">Causes</a>
+      <a href="#diagnosis">Diagnosis</a>
       <a href="#management">Management</a>
-      <a href="#myths">Myths</a>
     </div>
   </nav>
 
@@ -381,9 +348,9 @@
     <div class="container">
       <div class="hero-grid">
         <div class="hero-content reveal">
-          <span class="eyebrow"><i class="fa-solid fa-droplet"></i> Dry mouth is a dental risk signal</span>
+          <span class="eyebrow"><i class="fa-solid fa-droplet"></i> Dry Mouth (Xerostomia)</span>
           <h1>Xerostomia</h1>
-          <p>Dry mouth is not just thirst. It can mean reduced saliva protection, higher plaque retention, burning tissues, difficulty swallowing, bad breath, and faster tooth decay.</p>
+          <p>Dry mouth can occasionally happen if you're dehydrated or feeling particularly anxious. But when your mouth is dry all the time, it could point to an underlying health condition.</p>
           <div class="cta-row">
             <a href="#overview" class="btn btn-primary">Learn More <i class="fa-solid fa-arrow-down"></i></a>
             <a href="#management" class="btn btn-secondary">Management Tips <i class="fa-solid fa-shield-heart"></i></a>
@@ -400,170 +367,221 @@
   <main>
     <section id="overview" class="container reveal">
       <div class="section-head">
-        <h2>What Is Xerostomia?</h2>
-        <p class="sub">Xerostomia is dry mouth caused by not having enough saliva to keep the mouth comfortably moist. It may happen when salivary glands make too little saliva, when saliva becomes thick and sticky, or when medications, dehydration, diabetes, radiation therapy, stress, smoking, aging, or mouth breathing change oral moisture.</p>
+        <h2>Overview</h2>
+        <p class="sub">Dry mouth can occasionally happen if you're dehydrated or feeling particularly anxious. But when your mouth is dry all the time (xerostomia), it could point to an underlying health condition. Certain medications can also cause it. Left untreated, xerostomia makes you more vulnerable to tooth decay, gum disease and other dental issues.</p>
       </div>
-      <div class="explain">
+      <div class="grid-2">
         <div class="big-note panel">
-          <h3>Why saliva matters</h3>
-          <p>Saliva keeps the mouth wet, helps speech and swallowing, starts digestion, neutralizes acid, carries minerals that repair enamel, and protects the tongue, lips, cheeks, gums, and teeth.</p>
+          <h3>What is xerostomia?</h3>
+          <p>Xerostomia (dry mouth) is the sensation you may feel when you don't have enough saliva (spit). The salivary glands in your mouth produce saliva to lubricate your mouth and help keep it clean.</p>
         </div>
         <div class="panel card">
-          <ul class="list">
-            <li><i class="fa-solid fa-check"></i><span><strong>Low saliva changes the mouth environment.</strong> Acids remain longer, plaque sticks more easily, and the tongue or cheeks may feel raw, sticky, or burning.</span></li>
-            <li><i class="fa-solid fa-check"></i><span><strong>Dry mouth can affect daily life.</strong> Talking, chewing, tasting, sleeping, swallowing dry foods, and wearing dentures may become uncomfortable.</span></li>
-            <li><i class="fa-solid fa-check"></i><span><strong>Dental prevention becomes more important.</strong> Fluoride, hydration, saliva substitutes, sugar-free gum, and regular dental visits help reduce damage.</span></li>
-            <li><i class="fa-solid fa-check"></i><span><strong>It can signal another problem.</strong> Persistent xerostomia can be related to medicines, salivary gland disease, autoimmune conditions, diabetes, cancer treatment, or dehydration.</span></li>
-          </ul>
+          <p>Occasional dry mouth is normal. For instance, your mouth gets dry when you're dehydrated. But chronic dry mouth (when your mouth is dry all the time) could point to an underlying health condition. Most often, xerostomia is a side effect of certain medications, including antihistamines, decongestants and some antidepressants.</p>
+          <p>Dry mouth is common, affecting about 1 in 5 people. Your risk for dry mouth increases with age.</p>
         </div>
       </div>
     </section>
 
-    <section id="visuals" class="container reveal">
-      <div class="section-head">
-        <h2>Xerostomia Related Images</h2>
-        <p class="sub">The visuals below are connected to dry mouth: oral discomfort, hydration, fluoride care, and dental evaluation. The first image uses the dry-mouth image source you shared.</p>
-      </div>
+    <section class="container reveal">
       <div class="grid-3">
         <figure class="panel visual-card">
           <img src="https://i-cf65.ch-static.com/content/dam/cf-consumer-healthcare/health-professionals/en_US/biotene/SM12415%20Biotene%20Portal%20Images%20750x421%204.jpg?auto=format" alt="Dry mouth and xerostomia impact visual" loading="lazy" tabindex="0">
           <div class="fallback">Dry mouth xerostomia visual</div>
-          <figcaption><strong>Dry-mouth discomfort:</strong> xerostomia can affect eating, speaking, sleeping, and mouth comfort.</figcaption>
+          <figcaption>Dry mouth can affect comfort, eating, speaking and oral health.</figcaption>
         </figure>
         <figure class="panel visual-card">
-          <div class="shared-image-tile">
-            <div>
-              <i class="fa-solid fa-image"></i>
-              <strong>Shared xerostomia image 1</strong>
-              <p>Google share links do not work as direct inline image files, so this opens the source image page.</p>
-              <a href="https://share.google/yVf1Q4ZjAtH3zWjxt" target="_blank" rel="noopener">Open Image <i class="fa-solid fa-up-right-from-square"></i></a>
-            </div>
-          </div>
-          <figcaption><strong>Shared source:</strong> replace this tile with the direct image URL when available.</figcaption>
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Drinking_water.jpg/1280px-Drinking_water.jpg" alt="Drinking water for dry mouth" loading="lazy" tabindex="0">
+          <div class="fallback">Drinking water</div>
+          <figcaption>Drink plenty of water.</figcaption>
         </figure>
         <figure class="panel visual-card">
-          <div class="shared-image-tile">
-            <div>
-              <i class="fa-solid fa-image"></i>
-              <strong>Shared xerostomia image 2</strong>
-              <p>Google share links do not work as direct inline image files, so this opens the source image page.</p>
-              <a href="https://share.google/xQJciQfS5ucffY6Hu" target="_blank" rel="noopener">Open Image <i class="fa-solid fa-up-right-from-square"></i></a>
-            </div>
-          </div>
-          <figcaption><strong>Shared source:</strong> replace this tile with the direct image URL when available.</figcaption>
-        </figure>
-        <figure class="panel visual-card">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Drinking_water.jpg/1280px-Drinking_water.jpg" alt="Drinking water for dry mouth management" loading="lazy" tabindex="0">
-          <div class="fallback">Hydration support for xerostomia</div>
-          <figcaption><strong>Hydration support:</strong> frequent water sipping can reduce dryness and help clear food debris.</figcaption>
-        </figure>
-        <figure class="panel visual-card">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Toothbrushing.jpg/1280px-Toothbrushing.jpg" alt="Toothbrushing with fluoride toothpaste for dry mouth patients" loading="lazy" tabindex="0">
-          <div class="fallback">Fluoride care for dry mouth</div>
-          <figcaption><strong>Fluoride routine:</strong> low saliva increases decay risk, so enamel protection matters every day.</figcaption>
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Toothbrushing.jpg/1280px-Toothbrushing.jpg" alt="Toothbrushing for oral hygiene" loading="lazy" tabindex="0">
+          <div class="fallback">Oral hygiene</div>
+          <figcaption>Practice good oral hygiene and visit your dentist regularly.</figcaption>
         </figure>
       </div>
     </section>
 
     <section id="symptoms" class="container reveal">
       <div class="section-head">
-        <h2>Common Symptoms</h2>
-        <p class="sub">Symptoms may be constant or worse at night, after speaking, during stress, or after taking certain medications.</p>
+        <h2>Symptoms and Causes</h2>
+        <p class="sub">The hallmark symptom of xerostomia is a feeling of stickiness in your mouth due to a lack of saliva. When you speak, it might feel like your tongue sticks to the roof of your mouth.</p>
       </div>
       <div class="grid-4">
-        <div class="panel card"><i class="fa-solid fa-droplet-slash"></i><h3>Dry or sticky mouth</h3><p>The mouth may feel cottony, sticky, or hard to keep moist.</p></div>
-        <div class="panel card"><i class="fa-solid fa-fire"></i><h3>Burning feeling</h3><p>The tongue, cheeks, lips, or palate may feel sore or irritated.</p></div>
-        <div class="panel card"><i class="fa-solid fa-glass-water"></i><h3>Swallowing trouble</h3><p>Dry foods may be difficult to chew and swallow without water.</p></div>
-        <div class="panel card"><i class="fa-solid fa-wind"></i><h3>Bad breath</h3><p>Reduced saliva lets odor-causing bacteria stay active longer.</p></div>
-        <div class="panel card"><i class="fa-solid fa-lips"></i><h3>Cracked lips</h3><p>Lips and mouth corners can split, sting, or become inflamed.</p></div>
-        <div class="panel card"><i class="fa-solid fa-tooth"></i><h3>Frequent cavities</h3><p>Root and gumline decay can appear faster when saliva is low.</p></div>
-        <div class="panel card"><i class="fa-solid fa-comment-medical"></i><h3>Hoarse voice</h3><p>Dry throat can make speaking uncomfortable or scratchy.</p></div>
-        <div class="panel card"><i class="fa-solid fa-utensils"></i><h3>Taste changes</h3><p>Foods may taste different, metallic, bland, or harder to enjoy.</p></div>
+        <div class="panel card"><i class="fa-solid fa-wind"></i><h3>Bad breath</h3><p>Bad breath.</p></div>
+        <div class="panel card"><i class="fa-solid fa-head-side-cough"></i><h3>Constant sore throat</h3><p>Constant sore throat.</p></div>
+        <div class="panel card"><i class="fa-solid fa-utensils"></i><h3>Difficulty eating</h3><p>Difficulty eating, speaking or swallowing.</p></div>
+        <div class="panel card"><i class="fa-solid fa-face-meh"></i><h3>Dry nose</h3><p>Dry feeling in your nose.</p></div>
+        <div class="panel card"><i class="fa-solid fa-comment-medical"></i><h3>Hoarseness</h3><p>Hoarseness.</p></div>
+        <div class="panel card"><i class="fa-solid fa-glass-water"></i><h3>Increased thirst</h3><p>Increased thirst.</p></div>
+        <div class="panel card"><i class="fa-solid fa-lips"></i><h3>Mouth sores or pain</h3><p>Lip, tongue and mouth sores or pain.</p></div>
+        <div class="panel card"><i class="fa-solid fa-drumstick-bite"></i><h3>Taste disorders</h3><p>Taste disorders and trouble wearing dentures.</p></div>
       </div>
     </section>
 
-    <section id="risks" class="risk-band reveal">
-      <div class="container">
-        <div class="section-head">
-          <h2>Why It Matters for Teeth and Gums</h2>
-          <p class="sub">Saliva is one of the mouth's natural defense systems. Xerostomia weakens that defense and can quickly change the risk profile of the whole mouth.</p>
-        </div>
-        <div class="grid-3">
-          <div class="panel card risk-item"><i class="fa-solid fa-bacteria"></i><h3>More plaque retention</h3><p>Dry surfaces hold plaque more easily, especially around the gumline, tongue, and restorations.</p></div>
-          <div class="panel card risk-item"><i class="fa-solid fa-tooth"></i><h3>Higher decay risk</h3><p>Acids are not buffered as well, so enamel and exposed roots can demineralize faster.</p></div>
-          <div class="panel card risk-item"><i class="fa-solid fa-heart-pulse"></i><h3>Gum irritation</h3><p>Dry tissues can become sore, inflamed, and more vulnerable to injury or infection.</p></div>
-        </div>
+    <section class="container reveal">
+      <div class="section-head">
+        <h2>More Severe Symptoms</h2>
+      </div>
+      <div class="grid-4">
+        <div class="panel card"><i class="fa-solid fa-tooth"></i><h3>Tooth decay</h3><p>Tooth decay.</p></div>
+        <div class="panel card"><i class="fa-solid fa-eye"></i><h3>Dry eyes</h3><p>Dry eyes and skin.</p></div>
+        <div class="panel card"><i class="fa-solid fa-hand-dots"></i><h3>Skin rash</h3><p>Skin rash.</p></div>
+        <div class="panel card"><i class="fa-solid fa-bone"></i><h3>Joint pain</h3><p>Joint pain.</p></div>
       </div>
     </section>
 
     <section id="causes" class="container reveal">
       <div class="section-head">
-        <h2>Why It Happens</h2>
-        <p class="sub">Xerostomia is often multifactorial, so the best care plan looks at medicines, hydration, habits, medical history, and oral findings together.</p>
+        <h2>What Causes Xerostomia?</h2>
+        <p class="sub">Xerostomia happens when something causes your salivary glands to produce less saliva.</p>
       </div>
       <div class="grid-3">
-        <div class="panel card"><i class="fa-solid fa-pills"></i><h3>Medications</h3><p>Antihistamines, antidepressants, blood pressure medicines, pain medicines, and many others can reduce saliva.</p></div>
-        <div class="panel card"><i class="fa-solid fa-bottle-water"></i><h3>Dehydration</h3><p>Low fluid intake, fever, sweating, vomiting, or diarrhea can make the mouth feel extremely dry.</p></div>
-        <div class="panel card"><i class="fa-solid fa-syringe"></i><h3>Diabetes</h3><p>Blood sugar imbalance may increase thirst, mouth dryness, and risk of oral infections.</p></div>
-        <div class="panel card"><i class="fa-solid fa-radiation"></i><h3>Radiation therapy</h3><p>Head and neck radiation can injure salivary glands and create long-term dryness.</p></div>
-        <div class="panel card"><i class="fa-solid fa-smoking"></i><h3>Smoking and vaping</h3><p>Tobacco and vaping can irritate tissues and worsen dryness, breath, and gum risk.</p></div>
-        <div class="panel card"><i class="fa-solid fa-moon"></i><h3>Mouth breathing</h3><p>Open-mouth sleeping, congestion, snoring, or stress breathing can dry tissues overnight.</p></div>
+        <div class="panel card"><i class="fa-solid fa-pills"></i><h3>Certain medications</h3><p>Certain medications.</p></div>
+        <div class="panel card"><i class="fa-solid fa-notes-medical"></i><h3>Underlying health conditions</h3><p>Underlying health conditions.</p></div>
+        <div class="panel card"><i class="fa-solid fa-radiation"></i><h3>Radiation therapy</h3><p>Radiation therapy, especially for head and neck cancer.</p></div>
+        <div class="panel card"><i class="fa-solid fa-capsules"></i><h3>Chemotherapy drugs</h3><p>Chemotherapy drugs.</p></div>
+        <div class="panel card"><i class="fa-solid fa-bottle-water"></i><h3>Dehydration</h3><p>Dehydration.</p></div>
+        <div class="panel card"><i class="fa-solid fa-moon"></i><h3>Mouth breathing</h3><p>Mouth breathing.</p></div>
       </div>
     </section>
 
     <section class="container reveal">
       <div class="grid-2">
+        <div class="panel card">
+          <i class="fa-solid fa-pills"></i>
+          <h3>Medications that cause dry mouth</h3>
+          <p>Hundreds of medications (prescription and over-the-counter) can decrease your body's saliva production. If you check the information that comes with your medication, you may see "dry mouth" listed as a side effect.</p>
+          <ul class="list">
+            <li><i class="fa-solid fa-circle-check"></i><span>Antianxiety drugs and antidepressants.</span></li>
+            <li><i class="fa-solid fa-circle-check"></i><span>Anticholinergics.</span></li>
+            <li><i class="fa-solid fa-circle-check"></i><span>Antihistamines, decongestants and some pain medicines.</span></li>
+            <li><i class="fa-solid fa-circle-check"></i><span>Certain drugs for high blood pressure.</span></li>
+            <li><i class="fa-solid fa-circle-check"></i><span>Parkinson's disease medications.</span></li>
+          </ul>
+        </div>
+        <div class="panel card">
+          <i class="fa-solid fa-heart-pulse"></i>
+          <h3>Health problems that cause dry mouth</h3>
+          <ul class="list">
+            <li><i class="fa-solid fa-circle-check"></i><span>Salivary stones (sialolithiasis).</span></li>
+            <li><i class="fa-solid fa-circle-check"></i><span>Salivary gland inflammation (sialadenitis).</span></li>
+            <li><i class="fa-solid fa-circle-check"></i><span>Diabetes.</span></li>
+            <li><i class="fa-solid fa-circle-check"></i><span>Alzheimer's disease.</span></li>
+            <li><i class="fa-solid fa-circle-check"></i><span>Stroke.</span></li>
+            <li><i class="fa-solid fa-circle-check"></i><span>Sjogren's syndrome.</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="container reveal">
+      <div class="section-head">
+        <h2>Complications</h2>
+        <p class="sub">When you have chronic dry mouth, you're more likely to develop cavities, gum disease, mouth sores, cracked lips and oral thrush.</p>
+      </div>
+    </section>
+
+    <section id="diagnosis" class="container reveal">
+      <div class="grid-2">
         <figure class="panel visual-card">
           <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Dental_exam_2010.jpg/1280px-Dental_exam_2010.jpg" alt="Dental examination for xerostomia signs" loading="lazy" tabindex="0">
           <div class="fallback">Dental exam for xerostomia</div>
-          <figcaption><strong>Dental evaluation:</strong> clinicians check saliva pooling, tongue dryness, tissue irritation, gumline decay, plaque level, and medication history.</figcaption>
+          <figcaption>During an examination, a dentist will look for signs of xerostomia.</figcaption>
         </figure>
         <div class="panel card">
           <i class="fa-solid fa-magnifying-glass-chart"></i>
-          <h3>What a dentist may look for</h3>
-          <ul class="list">
-            <li><i class="fa-solid fa-circle-check"></i><span>Dry, shiny, red, cracked, or sticky oral tissues</span></li>
-            <li><i class="fa-solid fa-circle-check"></i><span>Thick, ropey, foamy, or reduced saliva</span></li>
-            <li><i class="fa-solid fa-circle-check"></i><span>New cavities near gumlines, roots, crowns, or fillings</span></li>
-            <li><i class="fa-solid fa-circle-check"></i><span>Possible fungal infection, burning tongue, ulcers, or denture soreness</span></li>
-          </ul>
+          <h3>Diagnosis and Tests</h3>
+          <p>During an examination, a dentist will look for signs of xerostomia. For instance, your tongue and inner cheeks may look dry and textured rather than smooth, shiny and moist. To see how much saliva you produce, your dentist may dab around your salivary glands with a piece of gauze. They'll also look for signs of cavities and gum disease, which can both occur as a result of dry mouth.</p>
         </div>
       </div>
     </section>
 
     <section id="management" class="container reveal">
       <div class="section-head">
-        <h2>Prevention and Management</h2>
-        <p class="sub">Management focuses on comfort, saliva support, cavity prevention, and reducing triggers. Persistent symptoms should be discussed with a dental or medical professional.</p>
+        <h2>Management and Treatment</h2>
+        <p class="sub">The main goal of dry mouth treatment is to increase saliva production. This will, in turn, reduce your risk for tooth decay and gum disease.</p>
       </div>
-      <div class="grid-4">
-        <div class="panel card"><i class="fa-solid fa-glass-water"></i><h3>Sip water often</h3><p>Small frequent sips can ease dryness and help clear food particles.</p></div>
-        <div class="panel card"><i class="fa-solid fa-circle"></i><h3>Sugar-free gum</h3><p>Xylitol gum or lozenges can stimulate saliva and reduce decay risk.</p></div>
-        <div class="panel card"><i class="fa-solid fa-pump-soap"></i><h3>Saliva substitutes</h3><p>Moisturizing rinses, gels, and sprays may improve comfort.</p></div>
-        <div class="panel card"><i class="fa-solid fa-shield-heart"></i><h3>Fluoride protection</h3><p>Use fluoride toothpaste and ask about high-fluoride options if risk is high.</p></div>
-        <div class="panel card"><i class="fa-solid fa-ban"></i><h3>Avoid alcohol rinses</h3><p>Alcohol-based mouthwash can sting tissues and worsen dryness.</p></div>
-        <div class="panel card"><i class="fa-solid fa-fan"></i><h3>Use a humidifier</h3><p>Nighttime humidity can reduce morning dryness and throat irritation.</p></div>
-        <div class="panel card"><i class="fa-solid fa-mug-hot"></i><h3>Limit caffeine</h3><p>Coffee, tea, and energy drinks may worsen dry-mouth sensation.</p></div>
-        <div class="panel card"><i class="fa-solid fa-user-doctor"></i><h3>Dental visits</h3><p>Regular exams help catch gumline decay and tissue changes early.</p></div>
+      <div class="grid-3">
+        <div class="panel card"><i class="fa-solid fa-prescription-bottle-medical"></i><h3>Underlying cause</h3><p>Specific dry mouth treatment depends on the underlying cause.</p></div>
+        <div class="panel card"><i class="fa-solid fa-tablets"></i><h3>Dry mouth lozenges</h3><p>Prescription-strength dry mouth lozenges like Sorbitol (Numoisyn).</p></div>
+        <div class="panel card"><i class="fa-solid fa-droplet"></i><h3>Saliva stimulators</h3><p>Saliva production stimulators like Cevimeline (Evoxac) and Pilocarpine (Salagen).</p></div>
+        <div class="panel card"><i class="fa-solid fa-kit-medical"></i><h3>Surgical repair</h3><p>Surgical salivary gland repair (less common).</p></div>
       </div>
     </section>
 
-    <section id="myths" class="container reveal">
+    <section class="container reveal">
       <div class="section-head">
-        <h2>Myth vs Fact</h2>
-        <p class="sub">Dry mouth is common, but it should not be ignored when it is persistent or connected with dental changes.</p>
+        <h2>Outlook / Prognosis</h2>
+        <p class="sub">You can successfully manage dry mouth symptoms with treatment. And in some cases, xerostomia may go away completely. Most of the time, it takes trial and error to figure out a solution.</p>
+      </div>
+    </section>
+
+    <section class="container reveal">
+      <div class="section-head">
+        <h2>Prevention</h2>
+        <p class="sub">There's not a miracle cure for dry mouth, but there are things you can do to reduce your risk. Most importantly, practice good oral hygiene and visit your dentist regularly for cleanings and exams.</p>
       </div>
       <div class="grid-2">
-        <div class="panel card myth"><i class="fa-solid fa-xmark"></i><h3>Myth: Dry mouth is just thirst.</h3><p>Xerostomia can happen even when someone drinks water, especially if salivary glands are affected.</p></div>
-        <div class="panel card fact"><i class="fa-solid fa-check"></i><h3>Fact: Saliva protects teeth.</h3><p>Low saliva can raise cavity, gum, irritation, and infection risk.</p></div>
-        <div class="panel card myth"><i class="fa-solid fa-xmark"></i><h3>Myth: Any mouthwash helps.</h3><p>Some alcohol-based rinses can make dry tissues feel worse.</p></div>
-        <div class="panel card fact"><i class="fa-solid fa-check"></i><h3>Fact: Prevention should be daily.</h3><p>Fluoride, hydration, saliva support, and dental monitoring work best as a routine.</p></div>
+        <div class="panel card">
+          <h3>Try these dry mouth remedies at home</h3>
+          <ul class="list">
+            <li><i class="fa-solid fa-circle-check"></i><span>Chew sugarless gum to stimulate saliva production.</span></li>
+            <li><i class="fa-solid fa-circle-check"></i><span>Suck on ice cubes or sugarless ice pops.</span></li>
+            <li><i class="fa-solid fa-circle-check"></i><span>Use a mouth wash formulated for dry mouth.</span></li>
+            <li><i class="fa-solid fa-circle-check"></i><span>Avoid decongestants and antihistamines when possible.</span></li>
+            <li><i class="fa-solid fa-circle-check"></i><span>Sip water before swallowing capsules or tablets.</span></li>
+            <li><i class="fa-solid fa-circle-check"></i><span>Take medications that cause dry mouth in the morning, not at night.</span></li>
+            <li><i class="fa-solid fa-circle-check"></i><span>Use a cool-mist humidifier, especially if you breathe through your mouth at night.</span></li>
+            <li><i class="fa-solid fa-circle-check"></i><span>Keep lip balm handy.</span></li>
+            <li><i class="fa-solid fa-circle-check"></i><span>Drink plenty of water.</span></li>
+          </ul>
+        </div>
+        <div class="panel card">
+          <h3>You should try to avoid</h3>
+          <ul class="list">
+            <li><i class="fa-solid fa-circle-xmark"></i><span>Smoking.</span></li>
+            <li><i class="fa-solid fa-circle-xmark"></i><span>Carbonated drinks.</span></li>
+            <li><i class="fa-solid fa-circle-xmark"></i><span>Beverages containing alcohol.</span></li>
+            <li><i class="fa-solid fa-circle-xmark"></i><span>Acidic, spicy, dry and sugary foods.</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="container reveal">
+      <div class="section-head">
+        <h2>Living With</h2>
+        <p class="sub">Everyone gets dry mouth on occasion. But when you have persistent dry mouth, it's time to call a healthcare provider. Early diagnosis and treatment can reduce your symptoms before they worsen.</p>
+      </div>
+      <div class="grid-2">
+        <div class="panel card">
+          <h3>Questions to ask your provider</h3>
+          <ul class="list">
+            <li><i class="fa-solid fa-circle-question"></i><span>What's causing dry mouth?</span></li>
+            <li><i class="fa-solid fa-circle-question"></i><span>Do I need to change my medications or adjust their dosage?</span></li>
+            <li><i class="fa-solid fa-circle-question"></i><span>Do I have an underlying condition that needs treatment?</span></li>
+            <li><i class="fa-solid fa-circle-question"></i><span>How often should I have teeth cleanings?</span></li>
+            <li><i class="fa-solid fa-circle-question"></i><span>What dry mouth products do you recommend?</span></li>
+          </ul>
+        </div>
+        <div class="panel card">
+          <h3>Why is my mouth dry even though I drink a lot of water?</h3>
+          <p>If your mouth still feels dry after drinking plenty of water, you might have xerostomia. This means your salivary glands don't produce enough saliva, so your mouth still feels dry even when you stay hydrated.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="container reveal">
+      <div class="section-head">
+        <h2>A Note</h2>
+        <p class="sub">It's normal for your mouth to feel dry every now and then. Often, it's your body's way of telling you to drink more water. But if you have dry mouth all the time, you could have xerostomia. Dry mouth may seem harmless. But over time, it can wreak havoc on your teeth and gums. It's important to see a healthcare provider at the first sign of trouble.</p>
       </div>
     </section>
   </main>
 
   <footer>
-    Dental awareness note: persistent xerostomia should be reviewed by a dentist or physician, especially with new cavities, burning mouth, mouth sores, or difficulty swallowing.
+    Medically reviewed. Last updated on 09/15/2023. Content adapted from Cleveland Clinic reference material for dental education.
   </footer>
 
   <div class="lightbox" id="lightbox" aria-hidden="true">
