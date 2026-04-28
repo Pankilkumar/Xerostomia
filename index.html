@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Xerostomia | Dry Mouth Dental Education</title>
+  <meta name="description" content="A premium single-page dental education website about xerostomia, dry mouth symptoms, causes, oral risks, and management." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <style>
+    :root {
+      --ink: #12313d;
+      --muted: #5d7580;
+      --blue: #0877a7;
+      --teal: #03a9b8;
+      --mint: #65dcc7;
+      --coral: #ec775f;
+      --amber: #f5bd5b;
+      --ice: #f2fbff;
+      --paper: #ffffff;
+      --line: rgba(18, 49, 61, .12);
+      --shadow: 0 22px 50px rgba(10, 74, 101, .16);
+      --radius: 12px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Manrope, sans-serif;
+      color: var(--ink);
+      background: linear-gradient(180deg, #f7fdff 0%, #ecf8fb 45%, #ffffff 100%);
+      overflow-x: hidden;
+    }
+    body.lightbox-active { overflow: hidden; touch-action: none; }
+
+    img { display: block; max-width: 100%; background: #e3f6fb; }
+    a { color: inherit; }
+    .container { width: min(1180px, 92vw); margin: 0 auto; position: relative; z-index: 2; }
+
+    .droplet-field { position: fixed; inset: 0; z-index: 0; pointer-events: none; overflow: hidden; }
+    .drop {
+      position: absolute;
+      width: 10px;
+      height: 15px;
+      border-radius: 55% 55% 60% 60%;
+      background: linear-gradient(180deg, rgba(3,169,184,.28), rgba(101,220,199,.08));
+      transform: rotate(18deg);
+      animation: floatDrop linear infinite;
+    }
+    @keyframes floatDrop {
+      from { translate: 0 110vh; opacity: 0; }
+      15% { opacity: .65; }
+      to { translate: 20px -120vh; opacity: 0; }
+    }
+
+    .nav {
+      position: fixed;
+      top: 14px;
+      left: 50%;
+      translate: -50% 0;
+      width: min(1180px, 92vw);
+      z-index: 20;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 12px 14px;
+      border: 1px solid rgba(255,255,255,.7);
+      background: rgba(255,255,255,.76);
+      backdrop-filter: blur(16px);
+      box-shadow: 0 12px 34px rgba(16, 80, 108, .12);
+      border-radius: 999px;
+    }
+    .brand { display: flex; align-items: center; gap: 9px; font-weight: 800; color: var(--blue); white-space: nowrap; }
+    .brand i { color: var(--teal); animation: toothBounce 1.8s ease-in-out infinite; }
+    @keyframes toothBounce { 50% { transform: translateY(-4px) rotate(-4deg); } }
+    .links { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; justify-content: flex-end; }
+    .links a {
+      text-decoration: none;
+      font-size: .88rem;
+      font-weight: 700;
+      color: #244956;
+      padding: 8px 10px;
+      border-radius: 999px;
+      transition: .2s ease;
+    }
+    .links a:hover { background: #e9f8fb; color: var(--blue); }
+
+    .hero {
+      min-height: 92vh;
+      display: grid;
+      align-items: end;
+      padding: 118px 0 42px;
+      position: relative;
+      overflow: hidden;
+      background: linear-gradient(135deg, #07384f, #0d8aa0);
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: -1px;
+      height: 110px;
+      background: linear-gradient(180deg, transparent, #f7fdff);
+      pointer-events: none;
+    }
+    .hero-content { width: min(760px, 92vw); color: white; position: relative; z-index: 2; }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: .92fr 1.08fr;
+      gap: 28px;
+      align-items: end;
+    }
+    .hero-image {
+      position: relative;
+      z-index: 2;
+      overflow: hidden;
+      border-radius: 18px;
+      border: 1px solid rgba(255,255,255,.42);
+      background: rgba(255,255,255,.92);
+      box-shadow: 0 26px 70px rgba(0,0,0,.28);
+    }
+    .hero-image img {
+      width: 100%;
+      height: auto;
+      aspect-ratio: 750 / 421;
+      object-fit: contain;
+      background: #eef9fc;
+    }
+    .hero-image span {
+      display: block;
+      padding: 11px 14px;
+      color: #0a526f;
+      font-weight: 800;
+      font-size: .92rem;
+      background: white;
+    }
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 12px;
+      border: 1px solid rgba(255,255,255,.32);
+      border-radius: 999px;
+      background: rgba(255,255,255,.14);
+      backdrop-filter: blur(8px);
+      font-weight: 800;
+      font-size: .9rem;
+    }
+    h1 {
+      margin: 18px 0 16px;
+      font-family: "DM Serif Display", serif;
+      font-size: clamp(2.65rem, 8vw, 6.3rem);
+      line-height: .92;
+      letter-spacing: 0;
+    }
+    .hero p {
+      margin: 0 0 24px;
+      max-width: 650px;
+      font-size: 1.08rem;
+      line-height: 1.75;
+      color: rgba(255,255,255,.9);
+    }
+    .cta-row { display: flex; gap: 12px; flex-wrap: wrap; }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      border: 0;
+      border-radius: 999px;
+      padding: 14px 18px;
+      font-weight: 900;
+      transition: .2s ease;
+    }
+    .btn-primary { color: #063545; background: linear-gradient(90deg, var(--mint), #d8fff5); }
+    .btn-secondary { color: white; border: 1px solid rgba(255,255,255,.38); background: rgba(255,255,255,.14); backdrop-filter: blur(8px); }
+    .btn:hover { transform: translateY(-3px); }
+
+    section { padding: 74px 0; }
+    .section-head { max-width: 810px; margin-bottom: 28px; }
+    h2 {
+      margin: 0 0 10px;
+      font-family: "DM Serif Display", serif;
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      line-height: 1;
+      color: #0a526f;
+      letter-spacing: 0;
+    }
+    .sub { margin: 0; color: var(--muted); line-height: 1.75; font-size: 1.03rem; }
+
+    .panel {
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.82);
+      box-shadow: var(--shadow);
+      border-radius: var(--radius);
+    }
+    .grid-2 { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+    .grid-3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
+    .grid-4 { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; }
+    .card {
+      padding: 22px;
+      transition: transform .2s ease, box-shadow .2s ease;
+    }
+    .card:hover { transform: translateY(-5px); box-shadow: 0 24px 52px rgba(10,74,101,.18); }
+    .card i { color: var(--teal); font-size: 1.35rem; }
+    .card h3 { margin: 14px 0 8px; color: #0a526f; font-size: 1.08rem; }
+    .card p { margin: 0; color: var(--muted); line-height: 1.65; }
+
+    .visual-card { overflow: hidden; padding: 0; }
+    .visual-card img { width: 100%; height: 260px; object-fit: cover; cursor: zoom-in; touch-action: manipulation; }
+    .visual-card figcaption { padding: 16px 18px 18px; color: var(--muted); line-height: 1.55; font-size: .94rem; }
+    .fallback {
+      min-height: 260px;
+      display: none;
+      place-items: center;
+      padding: 24px;
+      text-align: center;
+      color: #0a526f;
+      font-weight: 900;
+      background: linear-gradient(135deg, #e2f8ff, #ffffff);
+    }
+    .shared-image-tile {
+      min-height: 260px;
+      display: grid;
+      place-items: center;
+      padding: 24px;
+      text-align: center;
+      color: #0a526f;
+      background:
+        linear-gradient(135deg, rgba(3,169,184,.14), rgba(101,220,199,.2)),
+        #ffffff;
+    }
+    .shared-image-tile i {
+      display: block;
+      margin-bottom: 12px;
+      color: var(--teal);
+      font-size: 2rem;
+    }
+    .shared-image-tile a {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 14px;
+      padding: 10px 13px;
+      border-radius: 999px;
+      background: var(--blue);
+      color: white;
+      text-decoration: none;
+      font-weight: 800;
+      font-size: .92rem;
+    }
+
+    .explain {
+      display: grid;
+      grid-template-columns: .9fr 1.1fr;
+      gap: 22px;
+      align-items: stretch;
+    }
+    .big-note {
+      padding: 28px;
+      background: linear-gradient(145deg, #0b6f99, #08a0b3);
+      color: white;
+    }
+    .big-note h3 { margin: 0 0 12px; font-size: 1.6rem; }
+    .big-note p { margin: 0; line-height: 1.75; color: rgba(255,255,255,.92); }
+    .list { list-style: none; padding: 0; margin: 0; display: grid; gap: 13px; }
+    .list li { display: flex; gap: 12px; align-items: flex-start; color: #284c5a; line-height: 1.55; }
+    .list i { color: var(--mint); margin-top: 4px; }
+
+    .risk-band {
+      background: linear-gradient(135deg, #fff7ed, #f2fdff);
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+    .risk-item { border-left: 4px solid var(--coral); }
+    .risk-item:nth-child(2) { border-left-color: var(--amber); }
+    .risk-item:nth-child(3) { border-left-color: var(--teal); }
+
+    .myth { background: #fff4f1; border-color: rgba(236,119,95,.26); }
+    .fact { background: #effdf9; border-color: rgba(101,220,199,.36); }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity .7s ease, transform .7s ease;
+    }
+    .reveal.show { opacity: 1; transform: translateY(0); }
+
+    .lightbox {
+      position: fixed;
+      inset: 0;
+      z-index: 100;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 22px;
+      background: rgba(8, 32, 43, .82);
+      backdrop-filter: blur(10px);
+    }
+    .lightbox.open { display: flex; }
+    .lightbox img {
+      max-width: min(1100px, 94vw);
+      max-height: 84vh;
+      object-fit: contain;
+      border-radius: 12px;
+      box-shadow: 0 28px 80px rgba(0,0,0,.38);
+      cursor: default;
+      background: white;
+    }
+    .lightbox-close {
+      position: absolute;
+      top: 18px;
+      right: 18px;
+      width: 44px;
+      height: 44px;
+      border: 0;
+      border-radius: 50%;
+      background: white;
+      color: var(--ink);
+      font-size: 1.2rem;
+      cursor: pointer;
+      box-shadow: 0 10px 30px rgba(0,0,0,.2);
+      transition: .2s ease;
+    }
+    .lightbox-close:hover { transform: scale(1.06); }
+
+    footer {
+      padding: 34px 0 44px;
+      text-align: center;
+      color: var(--muted);
+      border-top: 1px solid var(--line);
+      background: white;
+    }
+
+    @media (max-width: 980px) {
+      .links { display: none; }
+      .hero { min-height: 86vh; }
+      .hero-grid { grid-template-columns: 1fr; align-items: start; }
+      .hero-content { width: 100%; }
+      .grid-3, .grid-4 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .explain, .grid-2 { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 640px) {
+      .nav { top: 8px; border-radius: 16px; }
+      .hero { padding-top: 96px; min-height: auto; padding-bottom: 28px; }
+      .hero p { font-size: 1rem; line-height: 1.6; }
+      .hero-image { border-radius: 14px; }
+      .hero-image span { font-size: .84rem; }
+      section { padding: 54px 0; }
+      .grid-3, .grid-4 { grid-template-columns: 1fr; }
+      .visual-card img, .fallback { height: 220px; min-height: 220px; }
+      .lightbox { padding: 12px; align-items: center; }
+      .lightbox img { max-width: 96vw; max-height: 78vh; border-radius: 10px; }
+      .lightbox-close { top: 12px; right: 12px; width: 46px; height: 46px; }
+      .card { padding: 18px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="droplet-field" id="droplets"></div>
+
+  <nav class="nav">
+    <div class="brand"><i class="fa-solid fa-tooth"></i> Xerostomia Dental Guide</div>
+    <div class="links">
+      <a href="#overview">Overview</a>
+      <a href="#visuals">Images</a>
+      <a href="#symptoms">Symptoms</a>
+      <a href="#causes">Causes</a>
+      <a href="#management">Management</a>
+      <a href="#myths">Myths</a>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-content reveal">
+          <span class="eyebrow"><i class="fa-solid fa-droplet"></i> Dry mouth is a dental risk signal</span>
+          <h1>Xerostomia</h1>
+          <p>Dry mouth is not just thirst. It can mean reduced saliva protection, higher plaque retention, burning tissues, difficulty swallowing, bad breath, and faster tooth decay.</p>
+          <div class="cta-row">
+            <a href="#overview" class="btn btn-primary">Learn More <i class="fa-solid fa-arrow-down"></i></a>
+            <a href="#management" class="btn btn-secondary">Management Tips <i class="fa-solid fa-shield-heart"></i></a>
+          </div>
+        </div>
+        <div class="hero-image reveal">
+          <img src="https://i-cf65.ch-static.com/content/dam/cf-consumer-healthcare/health-professionals/en_US/biotene/SM12415%20Biotene%20Portal%20Images%20750x421%204.jpg?auto=format" alt="Xerostomia dry mouth symptoms including mouth sores, cracked lips, and oral infections">
+          <span>Xerostomia visual: mouth sores, cracked lips, infection risk, and oral discomfort</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="overview" class="container reveal">
+      <div class="section-head">
+        <h2>What Is Xerostomia?</h2>
+        <p class="sub">Xerostomia is dry mouth caused by not having enough saliva to keep the mouth comfortably moist. It may happen when salivary glands make too little saliva, when saliva becomes thick and sticky, or when medications, dehydration, diabetes, radiation therapy, stress, smoking, aging, or mouth breathing change oral moisture.</p>
+      </div>
+      <div class="explain">
+        <div class="big-note panel">
+          <h3>Why saliva matters</h3>
+          <p>Saliva keeps the mouth wet, helps speech and swallowing, starts digestion, neutralizes acid, carries minerals that repair enamel, and protects the tongue, lips, cheeks, gums, and teeth.</p>
+        </div>
+        <div class="panel card">
+          <ul class="list">
+            <li><i class="fa-solid fa-check"></i><span><strong>Low saliva changes the mouth environment.</strong> Acids remain longer, plaque sticks more easily, and the tongue or cheeks may feel raw, sticky, or burning.</span></li>
+            <li><i class="fa-solid fa-check"></i><span><strong>Dry mouth can affect daily life.</strong> Talking, chewing, tasting, sleeping, swallowing dry foods, and wearing dentures may become uncomfortable.</span></li>
+            <li><i class="fa-solid fa-check"></i><span><strong>Dental prevention becomes more important.</strong> Fluoride, hydration, saliva substitutes, sugar-free gum, and regular dental visits help reduce damage.</span></li>
+            <li><i class="fa-solid fa-check"></i><span><strong>It can signal another problem.</strong> Persistent xerostomia can be related to medicines, salivary gland disease, autoimmune conditions, diabetes, cancer treatment, or dehydration.</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="visuals" class="container reveal">
+      <div class="section-head">
+        <h2>Xerostomia Related Images</h2>
+        <p class="sub">The visuals below are connected to dry mouth: oral discomfort, hydration, fluoride care, and dental evaluation. The first image uses the dry-mouth image source you shared.</p>
+      </div>
+      <div class="grid-3">
+        <figure class="panel visual-card">
+          <img src="https://i-cf65.ch-static.com/content/dam/cf-consumer-healthcare/health-professionals/en_US/biotene/SM12415%20Biotene%20Portal%20Images%20750x421%204.jpg?auto=format" alt="Dry mouth and xerostomia impact visual" loading="lazy" tabindex="0">
+          <div class="fallback">Dry mouth xerostomia visual</div>
+          <figcaption><strong>Dry-mouth discomfort:</strong> xerostomia can affect eating, speaking, sleeping, and mouth comfort.</figcaption>
+        </figure>
+        <figure class="panel visual-card">
+          <div class="shared-image-tile">
+            <div>
+              <i class="fa-solid fa-image"></i>
+              <strong>Shared xerostomia image 1</strong>
+              <p>Google share links do not work as direct inline image files, so this opens the source image page.</p>
+              <a href="https://share.google/yVf1Q4ZjAtH3zWjxt" target="_blank" rel="noopener">Open Image <i class="fa-solid fa-up-right-from-square"></i></a>
+            </div>
+          </div>
+          <figcaption><strong>Shared source:</strong> replace this tile with the direct image URL when available.</figcaption>
+        </figure>
+        <figure class="panel visual-card">
+          <div class="shared-image-tile">
+            <div>
+              <i class="fa-solid fa-image"></i>
+              <strong>Shared xerostomia image 2</strong>
+              <p>Google share links do not work as direct inline image files, so this opens the source image page.</p>
+              <a href="https://share.google/xQJciQfS5ucffY6Hu" target="_blank" rel="noopener">Open Image <i class="fa-solid fa-up-right-from-square"></i></a>
+            </div>
+          </div>
+          <figcaption><strong>Shared source:</strong> replace this tile with the direct image URL when available.</figcaption>
+        </figure>
+        <figure class="panel visual-card">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Drinking_water.jpg/1280px-Drinking_water.jpg" alt="Drinking water for dry mouth management" loading="lazy" tabindex="0">
+          <div class="fallback">Hydration support for xerostomia</div>
+          <figcaption><strong>Hydration support:</strong> frequent water sipping can reduce dryness and help clear food debris.</figcaption>
+        </figure>
+        <figure class="panel visual-card">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Toothbrushing.jpg/1280px-Toothbrushing.jpg" alt="Toothbrushing with fluoride toothpaste for dry mouth patients" loading="lazy" tabindex="0">
+          <div class="fallback">Fluoride care for dry mouth</div>
+          <figcaption><strong>Fluoride routine:</strong> low saliva increases decay risk, so enamel protection matters every day.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="symptoms" class="container reveal">
+      <div class="section-head">
+        <h2>Common Symptoms</h2>
+        <p class="sub">Symptoms may be constant or worse at night, after speaking, during stress, or after taking certain medications.</p>
+      </div>
+      <div class="grid-4">
+        <div class="panel card"><i class="fa-solid fa-droplet-slash"></i><h3>Dry or sticky mouth</h3><p>The mouth may feel cottony, sticky, or hard to keep moist.</p></div>
+        <div class="panel card"><i class="fa-solid fa-fire"></i><h3>Burning feeling</h3><p>The tongue, cheeks, lips, or palate may feel sore or irritated.</p></div>
+        <div class="panel card"><i class="fa-solid fa-glass-water"></i><h3>Swallowing trouble</h3><p>Dry foods may be difficult to chew and swallow without water.</p></div>
+        <div class="panel card"><i class="fa-solid fa-wind"></i><h3>Bad breath</h3><p>Reduced saliva lets odor-causing bacteria stay active longer.</p></div>
+        <div class="panel card"><i class="fa-solid fa-lips"></i><h3>Cracked lips</h3><p>Lips and mouth corners can split, sting, or become inflamed.</p></div>
+        <div class="panel card"><i class="fa-solid fa-tooth"></i><h3>Frequent cavities</h3><p>Root and gumline decay can appear faster when saliva is low.</p></div>
+        <div class="panel card"><i class="fa-solid fa-comment-medical"></i><h3>Hoarse voice</h3><p>Dry throat can make speaking uncomfortable or scratchy.</p></div>
+        <div class="panel card"><i class="fa-solid fa-utensils"></i><h3>Taste changes</h3><p>Foods may taste different, metallic, bland, or harder to enjoy.</p></div>
+      </div>
+    </section>
+
+    <section id="risks" class="risk-band reveal">
+      <div class="container">
+        <div class="section-head">
+          <h2>Why It Matters for Teeth and Gums</h2>
+          <p class="sub">Saliva is one of the mouth's natural defense systems. Xerostomia weakens that defense and can quickly change the risk profile of the whole mouth.</p>
+        </div>
+        <div class="grid-3">
+          <div class="panel card risk-item"><i class="fa-solid fa-bacteria"></i><h3>More plaque retention</h3><p>Dry surfaces hold plaque more easily, especially around the gumline, tongue, and restorations.</p></div>
+          <div class="panel card risk-item"><i class="fa-solid fa-tooth"></i><h3>Higher decay risk</h3><p>Acids are not buffered as well, so enamel and exposed roots can demineralize faster.</p></div>
+          <div class="panel card risk-item"><i class="fa-solid fa-heart-pulse"></i><h3>Gum irritation</h3><p>Dry tissues can become sore, inflamed, and more vulnerable to injury or infection.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="causes" class="container reveal">
+      <div class="section-head">
+        <h2>Why It Happens</h2>
+        <p class="sub">Xerostomia is often multifactorial, so the best care plan looks at medicines, hydration, habits, medical history, and oral findings together.</p>
+      </div>
+      <div class="grid-3">
+        <div class="panel card"><i class="fa-solid fa-pills"></i><h3>Medications</h3><p>Antihistamines, antidepressants, blood pressure medicines, pain medicines, and many others can reduce saliva.</p></div>
+        <div class="panel card"><i class="fa-solid fa-bottle-water"></i><h3>Dehydration</h3><p>Low fluid intake, fever, sweating, vomiting, or diarrhea can make the mouth feel extremely dry.</p></div>
+        <div class="panel card"><i class="fa-solid fa-syringe"></i><h3>Diabetes</h3><p>Blood sugar imbalance may increase thirst, mouth dryness, and risk of oral infections.</p></div>
+        <div class="panel card"><i class="fa-solid fa-radiation"></i><h3>Radiation therapy</h3><p>Head and neck radiation can injure salivary glands and create long-term dryness.</p></div>
+        <div class="panel card"><i class="fa-solid fa-smoking"></i><h3>Smoking and vaping</h3><p>Tobacco and vaping can irritate tissues and worsen dryness, breath, and gum risk.</p></div>
+        <div class="panel card"><i class="fa-solid fa-moon"></i><h3>Mouth breathing</h3><p>Open-mouth sleeping, congestion, snoring, or stress breathing can dry tissues overnight.</p></div>
+      </div>
+    </section>
+
+    <section class="container reveal">
+      <div class="grid-2">
+        <figure class="panel visual-card">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Dental_exam_2010.jpg/1280px-Dental_exam_2010.jpg" alt="Dental examination for xerostomia signs" loading="lazy" tabindex="0">
+          <div class="fallback">Dental exam for xerostomia</div>
+          <figcaption><strong>Dental evaluation:</strong> clinicians check saliva pooling, tongue dryness, tissue irritation, gumline decay, plaque level, and medication history.</figcaption>
+        </figure>
+        <div class="panel card">
+          <i class="fa-solid fa-magnifying-glass-chart"></i>
+          <h3>What a dentist may look for</h3>
+          <ul class="list">
+            <li><i class="fa-solid fa-circle-check"></i><span>Dry, shiny, red, cracked, or sticky oral tissues</span></li>
+            <li><i class="fa-solid fa-circle-check"></i><span>Thick, ropey, foamy, or reduced saliva</span></li>
+            <li><i class="fa-solid fa-circle-check"></i><span>New cavities near gumlines, roots, crowns, or fillings</span></li>
+            <li><i class="fa-solid fa-circle-check"></i><span>Possible fungal infection, burning tongue, ulcers, or denture soreness</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="management" class="container reveal">
+      <div class="section-head">
+        <h2>Prevention and Management</h2>
+        <p class="sub">Management focuses on comfort, saliva support, cavity prevention, and reducing triggers. Persistent symptoms should be discussed with a dental or medical professional.</p>
+      </div>
+      <div class="grid-4">
+        <div class="panel card"><i class="fa-solid fa-glass-water"></i><h3>Sip water often</h3><p>Small frequent sips can ease dryness and help clear food particles.</p></div>
+        <div class="panel card"><i class="fa-solid fa-circle"></i><h3>Sugar-free gum</h3><p>Xylitol gum or lozenges can stimulate saliva and reduce decay risk.</p></div>
+        <div class="panel card"><i class="fa-solid fa-pump-soap"></i><h3>Saliva substitutes</h3><p>Moisturizing rinses, gels, and sprays may improve comfort.</p></div>
+        <div class="panel card"><i class="fa-solid fa-shield-heart"></i><h3>Fluoride protection</h3><p>Use fluoride toothpaste and ask about high-fluoride options if risk is high.</p></div>
+        <div class="panel card"><i class="fa-solid fa-ban"></i><h3>Avoid alcohol rinses</h3><p>Alcohol-based mouthwash can sting tissues and worsen dryness.</p></div>
+        <div class="panel card"><i class="fa-solid fa-fan"></i><h3>Use a humidifier</h3><p>Nighttime humidity can reduce morning dryness and throat irritation.</p></div>
+        <div class="panel card"><i class="fa-solid fa-mug-hot"></i><h3>Limit caffeine</h3><p>Coffee, tea, and energy drinks may worsen dry-mouth sensation.</p></div>
+        <div class="panel card"><i class="fa-solid fa-user-doctor"></i><h3>Dental visits</h3><p>Regular exams help catch gumline decay and tissue changes early.</p></div>
+      </div>
+    </section>
+
+    <section id="myths" class="container reveal">
+      <div class="section-head">
+        <h2>Myth vs Fact</h2>
+        <p class="sub">Dry mouth is common, but it should not be ignored when it is persistent or connected with dental changes.</p>
+      </div>
+      <div class="grid-2">
+        <div class="panel card myth"><i class="fa-solid fa-xmark"></i><h3>Myth: Dry mouth is just thirst.</h3><p>Xerostomia can happen even when someone drinks water, especially if salivary glands are affected.</p></div>
+        <div class="panel card fact"><i class="fa-solid fa-check"></i><h3>Fact: Saliva protects teeth.</h3><p>Low saliva can raise cavity, gum, irritation, and infection risk.</p></div>
+        <div class="panel card myth"><i class="fa-solid fa-xmark"></i><h3>Myth: Any mouthwash helps.</h3><p>Some alcohol-based rinses can make dry tissues feel worse.</p></div>
+        <div class="panel card fact"><i class="fa-solid fa-check"></i><h3>Fact: Prevention should be daily.</h3><p>Fluoride, hydration, saliva support, and dental monitoring work best as a routine.</p></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    Dental awareness note: persistent xerostomia should be reviewed by a dentist or physician, especially with new cavities, burning mouth, mouth sores, or difficulty swallowing.
+  </footer>
+
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <button class="lightbox-close" type="button" aria-label="Close large image"><i class="fa-solid fa-xmark"></i></button>
+    <img id="lightboxImage" src="" alt="">
+  </div>
+
+  <script>
+    const field = document.getElementById('droplets');
+    for (let i = 0; i < 42; i++) {
+      const drop = document.createElement('span');
+      drop.className = 'drop';
+      drop.style.left = Math.random() * 100 + 'vw';
+      drop.style.top = Math.random() * 100 + 'vh';
+      drop.style.animationDuration = (Math.random() * 12 + 9) + 's';
+      drop.style.animationDelay = (-Math.random() * 14) + 's';
+      drop.style.scale = Math.random() * .9 + .55;
+      field.appendChild(drop);
+    }
+
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) entry.target.classList.add('show');
+      });
+    }, { threshold: .14 });
+    document.querySelectorAll('.reveal').forEach((el) => revealObserver.observe(el));
+
+    document.querySelectorAll('img').forEach((img) => {
+      img.addEventListener('error', () => {
+        const fallback = img.nextElementSibling && img.nextElementSibling.classList.contains('fallback')
+          ? img.nextElementSibling
+          : null;
+        img.style.display = 'none';
+        if (fallback) fallback.style.display = 'grid';
+      });
+    });
+
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImage = document.getElementById('lightboxImage');
+    const closeLightbox = () => {
+      lightbox.classList.remove('open');
+      lightbox.setAttribute('aria-hidden', 'true');
+      document.body.classList.remove('lightbox-active');
+      lightboxImage.src = '';
+      lightboxImage.alt = '';
+    };
+
+    const openLightbox = (img) => {
+      lightboxImage.src = img.currentSrc || img.src;
+      lightboxImage.alt = img.alt || 'Expanded xerostomia image';
+      lightbox.classList.add('open');
+      lightbox.setAttribute('aria-hidden', 'false');
+      document.body.classList.add('lightbox-active');
+    };
+
+    document.querySelectorAll('.visual-card img').forEach((img) => {
+      img.addEventListener('click', () => openLightbox(img));
+      img.addEventListener('pointerup', (event) => {
+        if (event.pointerType === 'touch') openLightbox(img);
+      });
+      img.addEventListener('keydown', (event) => {
+        if (event.key === 'Enter' || event.key === ' ') {
+          event.preventDefault();
+          openLightbox(img);
+        }
+      });
+    });
+
+    document.querySelector('.lightbox-close').addEventListener('click', closeLightbox);
+    lightbox.addEventListener('click', (event) => {
+      if (event.target === lightbox) closeLightbox();
+    });
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape' && lightbox.classList.contains('open')) closeLightbox();
+    });
+  </script>
+</body>
+</html>
