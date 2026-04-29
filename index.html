@@ -505,18 +505,136 @@
     }
 
     @media (max-width: 640px) {
-      .nav { top: 8px; border-radius: 16px; }
-      .hero { padding-top: 96px; min-height: auto; padding-bottom: 28px; }
-      .hero p { font-size: 1rem; line-height: 1.6; }
-      section { padding: 54px 0; }
+      .container { width: min(100% - 28px, 520px); }
+      .nav {
+        top: 8px;
+        width: calc(100% - 20px);
+        border-radius: 18px;
+        padding: 11px 12px;
+      }
+      .brand { font-size: .98rem; }
+      .brand i { font-size: 1.15rem; }
+      .hero {
+        padding-top: 104px;
+        min-height: auto;
+        padding-bottom: 42px;
+        background:
+          radial-gradient(circle at 90% 16%, rgba(23,105,209,.14), transparent 31%),
+          radial-gradient(circle at 14% 78%, rgba(69,184,255,.16), transparent 34%),
+          linear-gradient(160deg, #ffffff 0%, #f4f9ff 58%, #eaf6ff 100%);
+      }
+      .hero::before {
+        width: 300px;
+        right: -115px;
+        top: 88px;
+        opacity: .72;
+      }
+      .eyebrow {
+        font-size: .82rem;
+        padding: 8px 11px;
+        border-color: rgba(23,105,209,.20);
+        background: rgba(255,255,255,.84);
+        box-shadow: 0 12px 28px rgba(23,105,209,.09);
+      }
+      h1 {
+        margin: 18px 0 20px;
+        padding: 18px 16px 20px;
+        font-size: clamp(3.55rem, 18vw, 5rem);
+        line-height: .84;
+        border-radius: 24px;
+        color: #fff;
+        background:
+          linear-gradient(135deg, rgba(16,42,67,.95), rgba(23,105,209,.92)),
+          linear-gradient(90deg, #102a43, #1769d1);
+        -webkit-background-clip: border-box;
+        background-clip: border-box;
+        box-shadow: 0 22px 52px rgba(23,105,209,.22);
+        text-shadow: 0 8px 24px rgba(0,0,0,.16);
+      }
+      h2 {
+        font-size: clamp(2.1rem, 11vw, 3rem);
+        line-height: .95;
+        margin-bottom: 16px;
+      }
+      .section-head { margin-bottom: 20px; }
+      section { padding: 48px 0; }
       .grid-3, .grid-4 { grid-template-columns: 1fr; }
-      .visual-card { grid-template-rows: 220px 1fr; min-height: 330px; }
-      .visual-card img, .fallback { height: 220px; min-height: 220px; }
+      .grid-2, .grid-3, .grid-4 { gap: 14px; }
+      .visual-gallery { gap: 16px; }
+      .visual-card { grid-template-rows: 245px 1fr; min-height: 350px; border-radius: 18px; }
+      .visual-card img, .fallback { height: 245px; min-height: 245px; }
+      .visual-card figcaption { font-size: 1rem; padding: 15px 16px 17px; }
       .section-points { grid-template-columns: 1fr; }
+      .hero-points {
+        gap: 10px;
+        grid-template-columns: 1fr;
+        margin-bottom: 18px;
+      }
+      .point {
+        padding: 11px 12px;
+        border-radius: 16px;
+        font-size: .96rem;
+        line-height: 1.45;
+        text-align: left;
+      }
+      .hero-points .point {
+        min-height: auto;
+        border-left: 4px solid var(--blue);
+        background: rgba(255,255,255,.82);
+        box-shadow: 0 16px 38px rgba(23,105,209,.10);
+      }
+      .section-points .point:nth-child(even),
+      .hero-points .point:nth-child(even) {
+        background: rgba(235,247,255,.92);
+      }
+      .point i {
+        width: 28px;
+        min-width: 28px;
+        height: 28px;
+        display: inline-grid;
+        place-items: center;
+        margin-top: 0;
+        border-radius: 9px;
+        background: #eaf6ff;
+        color: var(--blue);
+        font-size: 1.08rem;
+      }
       .lightbox { padding: 12px; align-items: center; }
       .lightbox img { max-width: 96vw; max-height: 78vh; border-radius: 10px; }
       .lightbox-close { top: 12px; right: 12px; width: 46px; height: 46px; }
-      .card { padding: 18px; }
+      .card, .big-note { padding: 18px; border-radius: 18px; }
+      .card > i {
+        width: 50px;
+        height: 50px;
+        font-size: 1.5rem;
+        border-radius: 15px;
+      }
+      .card h3 {
+        font-size: 1.22rem;
+        margin: 14px 0 7px;
+      }
+      .card p, .list li {
+        font-size: 1rem;
+      }
+      .cta-row {
+        display: flex;
+        flex-wrap: nowrap;
+        gap: 10px;
+      }
+      .btn {
+        justify-content: center;
+        padding: 13px 12px;
+        font-size: .92rem;
+        flex: 1 1 0;
+        min-width: 0;
+      }
+      .myth-card { min-height: auto; border-radius: 18px; }
+      .myth-label { padding: 16px; font-size: .98rem; }
+      .fact-body { padding: 16px; }
+      .shared-image-card {
+        min-height: 250px;
+        border-radius: 18px;
+      }
     }
   </style>
 </head>
@@ -599,11 +717,11 @@
           <div class="fallback">Xerostomia oral image</div>
           <figcaption>During an examination, a dentist will look for signs of xerostomia.</figcaption>
         </figure>
-         <a class="panel shared-image-card" href="https://share.google/VBhtm4iQlkut5dtqK" target="_blank" rel="noopener">
-          <i class="fa-solid fa-image"></i>
-          <strong>Shared Xerostomia Image</strong>
-          <span>Open the image source you shared in a new tab.</span>
-        </a>
+        <figure class="panel visual-card">
+          <img src="https://pocketdentistry.com/wp-content/uploads/285/c14f00110.jpg" alt="Xerostomia related dental education image" loading="lazy" tabindex="0">
+          <div class="fallback">Xerostomia dental education image</div>
+          <figcaption>Cracked lips can appear with persistent dry mouth and reduced saliva protection.</figcaption>
+        </figure>
       </div>
     </section>
 
@@ -686,39 +804,6 @@
         <div class="panel card complication-card"><i class="fa-solid fa-notes-medical"></i><h3>Mouth sores</h3><p>Mouth sores.</p></div>
         <div class="panel card complication-card"><i class="fa-solid fa-face-grimace"></i><h3>Cracked lips</h3><p>Cracked lips.</p></div>
         <div class="panel card complication-card"><i class="fa-solid fa-bacteria"></i><h3>Oral thrush</h3><p>Oral thrush.</p></div>
-      </div>
-    </section>
-
-    <section class="container reveal">
-      <div class="section-head">
-        <h2>Myth vs Fact</h2>
-        <div class="point-grid section-points">
-          <div class="point"><i class="fa-solid fa-circle-info"></i><span>Dry mouth is easy to ignore, but chronic xerostomia can affect comfort, eating, speech and dental health.</span></div>
-          <div class="point"><i class="fa-solid fa-shield-heart"></i><span>Knowing the facts helps people seek care before tooth decay, gum problems or mouth sores get worse.</span></div>
-        </div>
-      </div>
-      <div class="grid-3">
-        <div class="panel myth-card">
-          <div class="myth-label"><i class="fa-solid fa-xmark"></i><span>Myth: Dry mouth is just thirst.</span></div>
-          <div class="fact-body">
-            <strong>Fact</strong>
-            <span>If your mouth stays dry even when you drink water, your salivary glands may not be producing enough saliva.</span>
-          </div>
-        </div>
-        <div class="panel myth-card">
-          <div class="myth-label"><i class="fa-solid fa-xmark"></i><span>Myth: It only affects comfort.</span></div>
-          <div class="fact-body">
-            <strong>Fact</strong>
-            <span>Chronic dry mouth makes you more vulnerable to tooth decay, gum disease, mouth sores, cracked lips and oral thrush.</span>
-          </div>
-        </div>
-        <div class="panel myth-card">
-          <div class="myth-label"><i class="fa-solid fa-xmark"></i><span>Myth: You should wait it out.</span></div>
-          <div class="fact-body">
-            <strong>Fact</strong>
-            <span>Persistent dry mouth is a reason to call a healthcare provider. Early diagnosis and treatment can reduce symptoms before they worsen.</span>
-          </div>
-        </div>
       </div>
     </section>
 
@@ -834,6 +919,39 @@
           <div class="point"><i class="fa-solid fa-triangle-exclamation"></i><span>If you have dry mouth all the time, you could have xerostomia.</span></div>
           <div class="point"><i class="fa-solid fa-tooth"></i><span>Over time, dry mouth can affect your teeth and gums.</span></div>
           <div class="point"><i class="fa-solid fa-user-doctor"></i><span>See a healthcare provider at the first sign of persistent trouble.</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container reveal">
+      <div class="section-head">
+        <h2>Myth vs Fact</h2>
+        <div class="point-grid section-points">
+          <div class="point"><i class="fa-solid fa-circle-info"></i><span>Dry mouth is easy to ignore, but chronic xerostomia can affect comfort, eating, speech and dental health.</span></div>
+          <div class="point"><i class="fa-solid fa-shield-heart"></i><span>Knowing the facts helps people seek care before tooth decay, gum problems or mouth sores get worse.</span></div>
+        </div>
+      </div>
+      <div class="grid-3">
+        <div class="panel myth-card">
+          <div class="myth-label"><i class="fa-solid fa-xmark"></i><span>Myth: Dry mouth is just thirst.</span></div>
+          <div class="fact-body">
+            <strong>Fact</strong>
+            <span>If your mouth stays dry even when you drink water, your salivary glands may not be producing enough saliva.</span>
+          </div>
+        </div>
+        <div class="panel myth-card">
+          <div class="myth-label"><i class="fa-solid fa-xmark"></i><span>Myth: It only affects comfort.</span></div>
+          <div class="fact-body">
+            <strong>Fact</strong>
+            <span>Chronic dry mouth makes you more vulnerable to tooth decay, gum disease, mouth sores, cracked lips and oral thrush.</span>
+          </div>
+        </div>
+        <div class="panel myth-card">
+          <div class="myth-label"><i class="fa-solid fa-xmark"></i><span>Myth: You should wait it out.</span></div>
+          <div class="fact-body">
+            <strong>Fact</strong>
+            <span>Persistent dry mouth is a reason to call a healthcare provider. Early diagnosis and treatment can reduce symptoms before they worsen.</span>
+          </div>
         </div>
       </div>
     </section>
